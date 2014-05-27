@@ -1,0 +1,33 @@
+{
+  "name": "basicFit",
+  "version": "1.0.0",
+  "authors": [
+    "Tobias Reich <tobias.reich.ich@gmail.com>"
+  ],
+  "description": "Turn elements on your site into a responsive unified grid",
+  "main": "dist/basicFit.min.js",
+  "keywords": [
+    "fit",
+    "grid",
+    "unified",
+    "box"
+  ],
+  "license": "MIT",
+  "homepage": "http://github.com/electerious/basicFit",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "etc"
+  ],
+  "devDependencies": {
+    "gulp": "^3.6.2",
+    "gulp-coffee": "^1.4.2",
+    "gulp-concat": "^2.2.0",
+    "gulp-load-plugins": "^0.5.0",
+    "gulp-uglify": "^0.2.1",
+    "gulp-util": "^2.2.14"
+  }
+}
