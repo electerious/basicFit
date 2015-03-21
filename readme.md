@@ -51,12 +51,12 @@ basicFit requires jQuery >= 2.1.0
 ####4. Initialize basicFit
 
 ```coffee
-fit.init '#content', '.element'
+basicFit.init '#content', '.element'
 ```
 
 ####5. Refresh after adding a new element
 
 ```coffee
 $('#content').append element
-fit.refresh()
+basicFit.refresh()
 ```
