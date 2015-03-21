@@ -1,18 +1,18 @@
-this.fit =
+this.basicFit =
 
-	_container: null
-	_elements: null
-	_elementsMargin: null
-	_elementsWidth: null
+	_container:			null
+	_elements:			null
+	_elementsMargin:	null
+	_elementsWidth:		null
 
 	_valid: ->
 
-		if	fit._container? and
-			fit._elements? and
-			fit._elementsMargin? and
-			fit._elementsWidth? and
-			not isNaN(fit._elementsMargin) and
-			not isNaN(fit._elementsWidth)
+		if	basicFit._container? and
+			basicFit._elements? and
+			basicFit._elementsMargin? and
+			basicFit._elementsWidth? and
+			not isNaN(basicFit._elementsMargin) and
+			not isNaN(basicFit._elementsWidth)
 
 				return true
 
@@ -20,39 +20,39 @@ this.fit =
 
 	_calculate: ->
 
-		if fit._valid
+		if basicFit._valid
 
-			containerWidth		= fit._container.width()
-			elementsNumber		= Math.floor containerWidth/fit._elementsWidth
-			elementsNewWidth	= (containerWidth/elementsNumber)-fit._elementsMargin
+			containerWidth		= basicFit._container.width()
+			elementsNumber		= Math.floor containerWidth/basicFit._elementsWidth
+			elementsNewWidth	= (containerWidth/elementsNumber)-basicFit._elementsMargin
 
-			fit._elements.css('width', "#{ elementsNewWidth }px")
+			basicFit._elements.css('width', "#{ elementsNewWidth }px")
 			return true
 
 		return false
 
 	init: (container, elements) ->
 
-		fit._container	= $(container)
-		fit._elements	= fit._container.children(elements)
+		basicFit._container	= $(container)
+		basicFit._elements	= basicFit._container.children(elements)
 
-		fit.refresh()
+		basicFit.refresh()
 
 		$(window).on 'resize', ->
-			fit._calculate()
+			basicFit._calculate()
 
-		return true if fit._valid
+		return true if basicFit._valid
 		return false
 
 	refresh: ->
 
-		fit._container	= $(fit._container.selector)
-		fit._elements	= fit._container.children(fit._elements.selector)
+		basicFit._container	= $(basicFit._container.selector)
+		basicFit._elements	= basicFit._container.children(basicFit._elements.selector)
 
-		fit._elementsMargin	= parseInt(fit._elements.css('margin-left')) + parseInt(fit._elements.css('margin-right'))
-		fit._elementsWidth	= parseInt(fit._elements.css('min-width')) + fit._elementsMargin
+		basicFit._elementsMargin	= parseInt(basicFit._elements.css('margin-left')) + parseInt(basicFit._elements.css('margin-right'))
+		basicFit._elementsWidth		= parseInt(basicFit._elements.css('min-width')) + basicFit._elementsMargin
 
-		fit._calculate()
+		basicFit._calculate()
 
-		return true if fit._valid
+		return true if basicFit._valid
 		return false

@@ -1,7 +1,7 @@
 var	gulp = require('gulp'),
-	plugins = require("gulp-load-plugins")();
+	plugins = require('gulp-load-plugins')();
 
-gulp.task('coffee', function () {
+gulp.task('scripts', function () {
 
 	gulp.src('./src/*.coffee')
 		.pipe(plugins.coffee({bare: true}).on('error', plugins.util.log))
@@ -11,4 +11,4 @@ gulp.task('coffee', function () {
 
 });
 
-gulp.task('default', ['coffee']);
+gulp.task('default', ['scripts']);
