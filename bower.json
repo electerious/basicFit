@@ -2,7 +2,7 @@
   "name": "basicFit",
   "version": "2.0.1",
   "authors": [
-    "Tobias Reich <tobias.reich.ich@gmail.com>"
+    "Tobias Reich <tobias@electerious.com>"
   ],
   "description": "Turn elements on your site into a responsive unified grid",
   "main": "dist/basicFit.min.js",
