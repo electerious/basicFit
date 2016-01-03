@@ -1,3 +1,5 @@
+> WARNING: This module has been deprecated.
+
 # basicFit
 
 Turn elements on your site into a responsive unified grid.
