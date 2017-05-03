@@ -1,5 +1,7 @@
 # [Deprecated] basicFit
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/electerious/basicFit.svg)](https://greenkeeper.io/)
+
 Turn elements on your site into a responsive unified grid.
 
 ![Context Screenshot](http://l.electerious.com/uploads/big/b549fbada34b81246856ef4158a02baf.png)
